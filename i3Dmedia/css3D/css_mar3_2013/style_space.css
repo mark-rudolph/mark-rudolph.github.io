@@ -1,0 +1,131 @@
+body {
+  -webkit-transform-style: preserve-3d;
+  color: #fff;
+}
+
+
+.g {
+  padding: 20% 30% 20% 35%;
+  top: 50%;
+  left: 50%;
+}
+
+.cube {
+  -webkit-perspective: 400;
+  -webkit-perspective-origin: center center;
+  -webkit-transform-origin: 0px 0px 0px;
+  -webkit-transform-style: preserve-3d;
+  position: absolute;
+  display: block;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  -webkit-transform: translateZ(0px) rotateX(20deg) rotateY(0deg) rotateZ(0deg); 
+}
+
+.cube #back  { 
+  -webkit-transform-origin: 0px 0px 0px;
+  -webkit-transform: translateZ(400px); 
+  /*background-color: hsla(300, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_negZ.jpg");*/ 
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+.cube #front  { 
+  -webkit-transform-origin: 0px 0px 0px;
+  /*background-color: hsla(75, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_posZ.jpg");*/ 
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+
+.cube #left  { 
+  -webkit-transform-origin: 201px 0px 200px;
+  -webkit-transform: rotateY( 90deg ); 
+  /*background-color: hsla(100, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_negX.jpg");*/ 
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+.cube #right  { 
+  -webkit-transform-origin: 200px 0px 200px;
+  -webkit-transform: rotateY( -90deg ); 
+  /*background-color: hsla(125, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_posX.jpg");*/ 
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+
+.cube #ground  { 
+  -webkit-transform-origin: 0px -200px 0px;
+  -webkit-transform: rotateX(-90deg) translateY(-600px) translateZ(600px); 
+  /*background-color: hsla(250, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_negY.jpg");*/ 
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  display: block;
+}
+
+.cube #sky  { 
+  -webkit-transform-origin: 0px -200px 0px;
+  -webkit-transform: rotateX(-90deg) translateY(-600px) translateZ(200px); 
+  /*background-color: hsla(200, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_posY.jpg");*/ 
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 401px;
+  height: 401px;
+  position: absolute;
+  display: block;
+}
+
+
+.cube {
+      -webkit-animation: spinCubeWebkit 30s infinite ease-in-out;
+              animation: spinCube       30s infinite ease-in-out;
+    }
+
+
+@-webkit-keyframes spinCubeWebkit {
+  0% { -webkit-transform: perspective(1500px) translateY(140px) translatez(0px) rotateY(-15deg) rotateX(35deg) rotateZ(-10deg); }
+  40% { -webkit-transform: perspective(300px) translateY(90px) translatez(100px)  rotateY(-10deg) rotateX(18deg) rotateZ(-35deg);}
+  60% { -webkit-transform: perspective(520px) translateY(60px)  translatez(200px) rotateY(-5deg ) rotateX(15deg) rotateZ(-43deg);}
+  100% { -webkit-transform: perspective(1500px) translateY(140px)  translatez(0px) rotateY( -15deg ) rotateX(35deg) rotateZ(-10deg);}
+}
+
+/*
+@-moz-keyframes spinCubeMoz {
+        0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+      100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+    }
+*/

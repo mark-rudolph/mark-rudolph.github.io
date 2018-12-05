@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+  
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- meta http-equiv="imagetoolbar" content="false" /-->
+<title>Interactive 3D scene 2</title>
+
+<link rel="stylesheet" type="text/css" href="./css/basic.css" />
+<link rel="stylesheet" type="text/css" href="./css/tooltip.css" />
+<!--
+<link rel="stylesheet" type="text/css" href="./css/dropdown.css" />
+-->
+
+<script type="text/javascript">
+/* <![CDATA[ */
+//document.write('<link rel="stylesheet" type="text/css" href="./css/preload.css" />');
+/* ]]> */
+</script>
+<!--
+<script type="text/javascript" src="./js/dropdown.js"></script>
+<script type="text/javascript" src="./js/rotator.js"></script>
+<script type="text/javascript" src="./js/jquery-1.6.1.js"></script>
+-->
+<script type="text/javascript" src="./js/swfobject.js"></script>
+<script type="text/javascript" src="./js/tooltip.js"></script>
+<script type="text/javascript" src="./js/seed.js"></script>
+
+</head>
+
+
+<body>
+  <!-- HTML5 and Javascript Written By Adam Khoury @ DevelopPHP.com -->
+  <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+  <span id="status"></span>
+  <h1 id="finalMessage"></h1>
+  <script type="text/javascript" language="javascript">
+  function progressBarSim(al) {
+    var bar = document.getElementById('progressBar');
+    var status = document.getElementById('status');
+    status.innerHTML = al+"%";
+    bar.value = al;
+    al++;
+  	var sim = setTimeout("progressBarSim("+al+")",400);
+  	if(al >= 100){
+  	  status.innerHTML = "100%";
+  	  bar.value = 100;
+  	  clearTimeout(sim);
+  	  var finalMessage = document.getElementById('finalMessage');
+  	  finalMessage.innerHTML = "";
+	  document.getElementById('progressBar').remove();  // bar.remove();
+  	}
+  }
+  var amountLoaded = 0;
+  progressBarSim(amountLoaded);
+  </script>
+
+  <span class="tooltip" title="click on the world to toggle between 'mountain world' and 'spirit world'"
+  style="margin-left:50px;color:lime;">
+                      Mouse over this text to read a guiding tooltip!
+  </span>
+
+
+  <div id="container">
+  <div id="flashContent">
+    <!-- object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1120" height="630" id="flash" align="middle"-->
+    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="1120" height="630" id="flash" align="middle">
+      <param name="movie" value="./media/seed.swf" />
+      <param name="quality" value="high" />
+      <param name="bgcolor" value="#000000" />
+      <param name="play" value="true" />
+      <param name="loop" value="true" />
+      <param name="wmode" value="transparent"/>
+      <!--param name="scale" value="showall" /-->
+      <param name="scale" value="no_scale" />
+      <param name="menu" value="true" />
+                  <param name="devicefont" value="false" />
+      <param name="salign" value="left" />
+      <param name="allowScriptAccess" value="always" />
+      <param name="allowFullScreen" value="true" />
+      <!--[if !IE]>-->
+      <object type="application/x-shockwave-flash" name="flash" id="flash" data="./media/seed.swf" width="1120" height="630">
+        <param name="movie" value="./media/seed.swf" />
+        <param name="quality" value="high" />
+        <param name="bgcolor" value="#000000" />
+        <param name="play" value="true" />
+        <param name="loop" value="true" />
+        <!--param name="wmode" value="transparent" /-->
+        <!--param name="wmode" value="gpu" /-->
+        <param name="wmode" value="direct" />
+        <!--param name="scale" value="showall" /-->
+        <!--param name="scale" value="no_scale" /-->
+        <param name="scale" value="no_scale" />
+        <param name="menu" value="true" />
+        <param name="devicefont" value="false" />
+        <!--param name="salign" value="top_left" /-->
+        <param name="salign" value="center" />
+        <param name="allowScriptAccess" value="always" />
+        <param name="allowFullScreen" value="true" />
+      </object>
+    </object>
+  </div><!-- flashContent -->
+ 
+  </p>
+  <br />
+</body>
+</html>

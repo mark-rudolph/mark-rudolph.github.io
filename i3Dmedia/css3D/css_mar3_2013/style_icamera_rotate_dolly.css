@@ -1,0 +1,167 @@
+body {
+  background-color: #000;
+}
+
+
+.g {
+  -webkit-transform-style: preserve-3d;
+  padding: 25% 25% 25% 25%;
+  top: 50%;
+  left: 50%;
+}
+
+
+.camera {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50% 0px;
+  -webkit-transform: translateZ(200px);
+  -webkit-perspective-origin: 200px 200px;
+  -webkit-perspective: 199.9px;
+  position: absolute;
+}
+
+/* -webkit-transform: translateZ(0.01px); is hack for probable bug 
+ * without some animation left and sky do NOT render - see body background
+ */
+/* NOTE: transform-origin must be 200px 200px 0px and not
+ * 50% 50% 0%  
+
+ * NOTE: By setting transform-origin at 200px 800px 0px rotateX becomes
+ * flattened and very similar in effect to translateZ.
+ * However the range of rotation, especially in the -z direction, i.e
+ * translateX with negative angles, must be constrained 
+ * (in camera_rotate_dolly.js) 
+ */
+.cube {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 200px 800px 0px; /* see NOTES above! */
+  -webkit-transform: translateZ(0.1px);  /* probable bug! */
+  background-color: #fff;
+  position: absolute;
+  display: block;
+  font-size: 100px; /* base font-size */
+  font-weight: bold;
+  text-align: center;
+  color: #fff; /* default text color */
+}
+
+
+/* NOTE: font-size = 2* 100px(text-size in .cube) so full size of wall */
+.cube #front  { 
+  -webkit-transform-origin: 50% 50% 0%;
+  -webkit-transform: translateZ(-200px);
+  background-image: url("../img/skybox/snow_posZ.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 1.8em; 
+  -webkit-backface-visibility: visible;
+}
+
+.cube #back  { 
+  -webkit-transform-origin: 50% 50% 0%;
+  -webkit-transform: rotateY(180deg) translateZ(-200px);
+  background-image: url("../img/skybox/snow_negZ.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 1.8em;  
+  -webkit-backface-visibility: visible;
+}
+
+.cube #left  { 
+  -webkit-transform-origin: 50% 50% 0%;
+  -webkit-transform:  rotateY(90deg ) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_negX.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  text-align: right;
+  font-size: 2em; 
+  -webkit-backface-visibility: visible;
+}
+
+.cube #right  { 
+  -webkit-transform-origin: 50% 50% 0%;
+  -webkit-transform:  rotateY(-90deg ) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_posX.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  text-align: left;
+  font-size: 1.9em;
+  -webkit-backface-visibility: visible;
+}
+
+.cube #ground  { 
+  -webkit-transform-origin: 50% 50% 0%;
+  -webkit-transform: rotateX(90deg) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_negY.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 1.3em; 
+  -webkit-backface-visibility: visible;
+}
+
+.cube #sky  { 
+  -webkit-transform-origin: 50% 50% 0%;
+  -webkit-transform: rotateX(-90deg) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_posY.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 2.5em; 
+  -webkit-backface-visibility: visible;
+}
+
+/* 
+ * > boundary <=800px => white leters 
+ *             >800px => red letters
+ */
+@media screen and (min-width: 801px) {
+  .cube {
+    color: red;
+  }
+}
+
+
+/*
+ * animations
+ */
+/*
+ * spinCubeWebkitXY 
+ */
+/*
+.cube {
+      -webkit-animation: spinCubeWebkitXY 30s infinite ease-in-out;
+    }
+
+@-webkit-keyframes spinCubeWebkitXY {
+  0% { -webkit-transform: rotateX(0deg)  rotateY(0deg) }
+  25% { -webkit-transform:  rotateX(-5deg)  rotateY(90deg) }
+  50% { -webkit-transform:  rotateX(0deg)  rotateY(180deg) }
+  75% { -webkit-transform:  rotateX(-5deg)  rotateY(270deg) }
+  100% { -webkit-transform:  rotateX(0deg)  rotateY(360deg) }
+}
+*/
+
+

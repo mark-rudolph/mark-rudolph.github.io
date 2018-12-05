@@ -1,0 +1,256 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+		
+@font-face{	
+    	font-family: "Neuropol";
+		src: url("../fonts/neuropol.ttf");
+}  
+
+
+
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+  	color: #ffffff; /* #555753; */
+    background-color: #000;
+    /*
+	background-image: -webkit-gradient(linear, left center, right center, from(#7093d0), color-stop(39%, #444444), to(#110000));
+    background-image: -moz-linear-gradient(left, #7093d0, #444444 39%, #110000);
+    */
+	background-image: -webkit-gradient(linear, left center, right center, from(#7093d0), color-stop(39%, #100000), to(#000000));
+    background-image: -moz-linear-gradient(left, #7093d0, #100000 39%, #000000);
+	/*background-image: -webkit-gradient(linear,left center,right center,from(#100),color-stop(39%,#444),to(#010)); 
+    background-image: -moz-linear-gradient(left,#100,#444 39%,#010);*/
+	}
+	
+p { 
+	margin-top: 0; 
+	}
+	
+	
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 2px; 
+	color: #ffffff; /* #7D775C;*/
+	}
+	
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color:#B3AE94;
+	}
+	
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+	
+a:hover, a:active { 
+	text-decoration: underline; 
+	color: #eee;
+	}
+	
+
+
+/* specific divs */
+#header{
+    color: #ddd;
+	padding: 0px 0px 60px 110px;
+	margin-left: 30px;
+	background: transparent url("../img/logo_smaller.png") no-repeat top left;  
+}
+
+
+#title{
+        font-size: 3.5em;
+        padding: 10px 1px 0px 1px; 
+		font-family: "Neuropol"; 
+		text-shadow: 0 -2px 3px #aaa,
+                     0 -4px 3px #777;
+}
+
+#wrapper {
+	margin-top: 20px;
+}
+
+
+
+
+#footer { 
+	margin-top: 29px;
+    padding-bottom: 1px;
+	padding-right:7px;
+	font-size:9px; 
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	letter-spacing:1.5px;
+	color: #999;
+border-style: solid;
+border-width: 256px 22px 46px 256px;
+-moz-border-image: url(../img/metalWaves.png) 53 48 199 203 stretch repeat;
+-webkit-border-image: url(../img/metalWaves.png) 53 48 199 203 stretch repeat;
+-o-border-image: url(../img/metalWaves.png) 53 48 199 203 stretch repeat; 
+border-image: url(../img/metalWaves.png) 53 48 199 203 fill stretch repeat;
+	
+	}
+	
+		
+#footer a:link, #footer a:visited { 
+	margin-right: 2px;
+	margin-left:0px;
+	float:right;
+	}		
+	
+	
+
+#linkList {
+	position: absolute;
+	top: 80px; 
+	left: 50px; 
+        /*bottom: 50px */
+	}
+	
+		
+#linkList2 { 
+	font: 10px verdana, sans-serif;  
+/*	width: 130px; 
+*/	}
+	
+	
+#linkList h3.select { 
+	padding: 5px 0 5px 0; 
+	height: 16px; 
+	}
+
+#linkList li {
+	line-height: 2.3ex; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+}
+
+
+#linkList li a:link {
+	color: #988F5E;
+	}
+#linkList li a:visited {
+	color: #B3AE94;
+	}
+
+li#home {
+	font-size:14px;
+	font-family: "Neuropol"; 
+	font-style:italic;
+	list-style:inside;
+	text-shadow: 1px 1px 1px #aaa;
+        padding: 45px 0px 0px 0px;
+}
+
+#imagegallery {
+  float : left ;
+  list-style : none ;
+  margin-left: 0;
+  margin-top: 5px;
+        max-width: 480px;
+} 
+
+
+#placeholder {
+  width: 100%;
+  height: 100%;
+  /* margin-left: 45px; */
+  margin-left: 0px;
+  margin-top: 19px;
+}
+
+
+
+li {
+  float : left ;
+  padding-top : 0em ;
+  padding-bottom : 0em ;
+  padding-left : 0.4em ;
+  padding-right : 0px ;
+  list-style : none ;
+} 
+
+
+img {
+  display : block ;
+  clear : both ;
+} 
+
+
+
+/*#description {
+  margin-left: 90px;
+  margin-top: 15px;
+  color: #777;
+  font-weight: bold;
+  width: 510px;
+  font-size:9px;
+  font-family:Verdana, Geneva, sans-serif;
+}
+
+*/
+
+
+
+
+*/
+/* media queries testing viewport max-width change scale, gradient colors */
+/* 
+ * >=769px large tablet - tiny laptop 
+ */
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 100%; }
+}
+/* 
+ * <=768px 
+ */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 85%;
+  }
+}
+
+/* 
+ * <=640px  landscape tablet 
+ */
+@media screen and (max-width: 640px) {
+  body {
+    font-size: 70%; }
+}
+
+/* 
+ * <=480px - high resolution smartphone 
+ */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 55%; }
+}
+
+/* 
+ * <=320px - low resolution smartphone 
+ */
+@media screen and (max-width: 320px) {
+  body {
+    font-size: 40%; }
+}
+/* 
+ * <=256px - tiny phone 
+ */
+@media screen and (max-width: 256px) {
+  body {
+    font-size: 25%; }
+}
+
+	

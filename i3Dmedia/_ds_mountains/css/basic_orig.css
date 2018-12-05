@@ -1,0 +1,45 @@
+﻿/* `Basic HTML
+----------------------------------------------------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%; 
+}
+
+body {
+	background: #000;
+	color: #999;   /* #333 */
+	font: 12px Arial, sans-serif;
+}
+
+/* Base padding. */
+#container {
+	padding: 20px; 
+        margin-left: 0px;  /* 180 */
+}
+
+h1 {
+	font-size: 24px;
+}
+
+p {
+	clear: both;
+	margin: 0 0 20px;
+}
+
+img {
+        border: 0px;
+        margin-left: 0px;  /* rudolph -  120px width of drop-down item img */
+        font-size: 0;
+}
+
+
+/* rudolph aug 25 - move stage full left */
+#flashContent {
+        margin-left: 0px;
+}        

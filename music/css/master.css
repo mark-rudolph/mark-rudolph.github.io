@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*.w-font-open_sans { font-family: 'Open Sans', sans-serif !important; }*/
+.w-font-helvetica { font-family: 'Helvetica Neue', sans-serif !important; }
+.w-font-monoton { font-family: 'neuropol', sans-serif !important; }
+.w-font-carter_one { font-family: 'neuropol', sans-serif !important; }
+/*.w-font-dancing_script { font-family: 'Dancing Script', cursive !important; }*/
+
+
+.button {
+	color: #ddd;
+	font-family:"Neuropol";
+	letter-spacing:2px;
+	font-size:15px;
+    margin-right:30px;
+	margin-top:70px;
+	padding:10px;
+	margin-left: 100px;
+	text-shadow:#222 1px 1px 1px;
+}
+
+
+
+input {
+	font-weight:bold;
+/*	background-color:#33335c;
+*/  background-color:#3e7ba3;
+}
+
+form {
+	float: left;
+/*	position:fixed;
+*/	/*top:0;*/
+/*	right:center;
+*//*	top:50px;
+*/}
+
+
+@font-face{	
+    	font-family: "Neuropol";
+		src: url("fonts/neuropol.ttf");
+}  	 

@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+.w-font-open_sans { font-family: 'neuropol', sans-serif !important; }
+.w-font-helvetica { font-family: 'neuropol', sans-serif !important; }
+.w-font-monofett { font-family: 'neuropol', sans-serif !important; }
+.w-font-marvel { font-family: 'neuropol', sans-serif !important; }
+.w-font-dancing_script { font-family: 'Dancing Script', cursive !important; }
+
+@font-face{	
+    	font-family: "Neuropol";
+		src: url("fonts/neuropol.ttf");
+}  	 
+
+
+#contactme_tab,#contactme_tab:link {
+	position:fixed;
+	display:block;
+	margin:0;
+	bottom:8%;
+	left:0;
+	width:40px;
+	height:146px;
+	z-index:10100000001;
+	padding:0;
+	text-decoration:none;
+	}
+	
+#contactme_tab_inner {
+		display:block;
+		left:0;
+		position:absolute;
+		width:40px;
+		height:146px;
+		}
+		
+		
+#contactme_tab_color {
+	background-color:#003C68;
+	z-index: 10100000002;
+	display: block;
+	position: absolute;
+	left: 0;
+	height:138px;
+	width:36px;
+	top:4px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	}
+	
+#contactme_tab:hover #contactme_tab_color {
+	background-color:#003C68;
+	}
+	
+#contactme_tab_text {
+	z-index: 10100000003;
+	text-indent: -10000px;
+	display: block;
+	height: 146px;
+	width: 40px;
+	position: absolute;
+	top:0;
+	left:0;
+	background: transparent url(http://buttons.contactme.com/widgets/tab/v1/en/contact-me_left_dark.png?locale=en&r=http%3A%2F%2Fmarkrudolph.webs.com%2Fapps%2Fphotos%2Falbum%3Falbumid%3D14385785&u=http%3A%2F%2Fmarkrudolph.webs.com%2F&f=50efa93e3d99a4000200cebe&ha=left&va=bottom&tx=Contact%20Me&c=003C68&vid=140ee71e9682115) top left no-repeat;
+	}
+	
+#contactme_overlay { 
+    display:none;
+	background-color:#000;
+	position:fixed;
+	left:0;
+	top:0;
+	opacity:0.7;
+	filter:alpha(opacity=70);
+	width:100%;
+	height:100%;
+	z-index:10100000004;
+	}
+	
+#contactme_dialog {
+	display:none;
+	position:absolute;
+	left:100px;
+	top:100px;
+	z-index:10100000005;
+	}
+	
+#contactme_dialog_close {
+	background:transparent url(http://static.contactme.com/widgets/tab/v1/close.png) 0 0 no-repeat;
+	position:absolute;
+	right:20px;
+	top:21px;
+	width:26px;
+	height:26px;
+	cursor:pointer;
+	}
+	
+#contactme_dialog_close span {
+	display:none; }
+	
+#contactme_dialog iframe {
+	background:transparent;
+	border:0;
+	width:507px;
+	height:1000px;
+	}
+	
+	
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-area-custom {
+  width: 100%;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .title {
+  top: 29px;
+  z-index: 20;
+  display: block;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .subtitle {
+  top: 55px;
+  z-index: 21;
+  display: none;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-left.title,
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-center.title {
+  left: 123px;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-left.subtitle,
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-center.subtitle {
+  left: 0px;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-left.w-header-layer-centered,
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-center.w-header-layer-centered {
+  right: auto;
+  left: 50%;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-right.title {
+  right: 0px;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .w-header-layer-align-right.subtitle {
+  right: 0px;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .logo {
+  top: 0px;
+  width: 50px;
+  left: 0px;
+  height: 50px;
+  display: none;
+}
+#webs-bin-5031a3ac0cf232d0e734515d .background {
+  background-image: url('');
+  background-position: 0px 0px;
+}	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

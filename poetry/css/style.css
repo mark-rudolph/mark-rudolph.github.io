@@ -1,0 +1,18 @@
+body{
+  margin-left: 90px;
+  margin-top: 50px;
+  color: #555;
+  background-color: #eee;
+  font-size: 0.8em;
+/*  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+*/  line-height: 23px;
+font-family:"Neuropol X Free";
+}
+
+h1, h3 a {
+ color: #555;
+}
+
+h3 a:hover {
+ color: #1e90ff;
+}

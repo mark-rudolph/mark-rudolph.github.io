@@ -1,0 +1,186 @@
+body {
+  background-color: #000;
+}
+
+
+.g {
+  transform-style: preserve-3d;
+  padding: 25% 25% 25% 25%;
+  top: 50%;
+  left: 50%;
+}
+
+
+.camera {
+  transform-style: preserve-3d;
+  transform-origin: 50% 50% 0px;
+  transform: translateZ(200px);
+  perspective-origin: 200px 200px;
+  perspective: 199px;
+  position: absolute;
+}
+
+/* transform: translateZ(0.01px); is hack for probable bug 
+ * without some animation left and sky do NOT render - see body background
+ */
+/* NOTE: transform-origin must be 200px 200px 0px and not
+ * 50% 50% 0%  
+
+ * NOTE: By setting transform-origin at 200px 800px 0px rotateX becomes
+ * flattened and very similar in effect to translateZ.
+ * However the range of rotation, especially in the -z direction, i.e
+ * translateX with negative angles, must be constrained 
+ * (in camera_rotate_dolly.js) 
+ */
+.cube {
+  transform-style: preserve-3d;
+  transform-origin: 200px 800px 0px; /* see NOTES above! */
+  transform: translateZ(0.1px);  /* probable bug! */
+  background-color: #fff;
+  position: absolute;
+  display: block;
+  font-size: 100px; /* base font-size */
+  font-weight: bold;
+  text-align: center;
+  color: #fff; /* default text color */
+}
+
+
+/* NOTE: font-size = 2* 100px(text-size in .cube) so full size of wall */
+.cube #front  { 
+  transform-origin: 50% 50% 0%;
+  transform: translateZ(-200px);
+  background-image: url("../img/skybox/snow_posZ.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 1.8em; 
+  backface-visibility: visible;
+}
+
+.cube #back  { 
+  transform-origin: 50% 50% 0%;
+  transform: rotateY(180deg) translateZ(-200px);
+  background-image: url("../img/skybox/snow_negZ.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 1.8em;  
+  backface-visibility: visible;
+}
+
+.cube #left  { 
+  transform-origin: 50% 50% 0%;
+  transform:  rotateY(90deg ) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_negX.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  text-align: right;
+  font-size: 2em; 
+  backface-visibility: visible;
+}
+
+.cube #right  { 
+  transform-origin: 50% 50% 0%;
+  transform:  rotateY(-90deg ) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_posX.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  text-align: left;
+  font-size: 1.9em;
+  backface-visibility: visible;
+}
+
+.cube #ground  { 
+  transform-origin: 50% 50% 0%;
+  transform: rotateX(90deg) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_negY.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 1.3em; 
+  backface-visibility: visible;
+}
+
+.cube #sky  { 
+  transform-origin: 50% 50% 0%;
+  transform: rotateX(-90deg) translateZ(-200px); 
+  background-image: url("../img/skybox/snow_posY.jpg");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+  font-size: 2.5em; 
+  backface-visibility: visible;
+}
+
+/* 
+ * > boundary <=800px => white leters 
+ *             >800px => red letters
+ */
+@media screen and (min-width: 801px) {
+  .cube {
+    color: red;
+  }
+}
+
+
+/*
+ * animations
+ */
+
+/*
+ * spinCubeWebkitY 
+ */
+.cube {
+   animation-name: spinCubeWebkitY 120s infinite ease-in-out;
+    animation: spinCubeWebkitY       120s infinite ease-in-out;
+}
+
+@keyframes spinCubeWebkitY {
+  0% { transform: rotateY(0deg) }
+  25% { transform:  rotateY(90deg) }
+  50% { transform:  rotateY(180deg) }
+  75% { transform:  rotateY(270deg) }
+  100% { transform:  rotateY(360deg) }
+}
+
+
+/
+/*
+ * spinCubeWebkitXY 
+ */
+/*
+.cube {
+      animation: spinCubeWebkitXY 30s infinite ease-in-out;
+    }
+
+@keyframes spinCubeWebkitXY {
+  0% { transform: rotateX(0deg)  rotateY(0deg) }
+  25% { transform:  rotateX(-5deg)  rotateY(90deg) }
+  50% { transform:  rotateX(0deg)  rotateY(180deg) }
+  75% { transform:  rotateX(-5deg)  rotateY(270deg) }
+  100% { transform:  rotateX(0deg)  rotateY(360deg) }
+}
+*/
+
+

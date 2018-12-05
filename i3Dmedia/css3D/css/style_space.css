@@ -1,0 +1,139 @@
+body {
+  transform-style: preserve-3d;
+  color: #000;
+}
+
+
+.g {
+  padding: 20% 30% 20% 35%;
+  top: 50%;
+  left: 50%;
+}
+
+.cube {
+  perspective: 129;
+  perspective-origin: 20px 100px; /*center center;*/
+  transform-origin: 100px 100px 0px;
+  transform-style: preserve-3d;
+  position: absolute;
+  display: block;
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  transform: translateZ(0px) rotateX(20deg) rotateY(0deg) rotateZ(0deg); 
+}
+
+.cube #back  { 
+  transform-origin: 0px 0px 0px;
+  transform: translateZ(400px); 
+  /*background-color: hsla(300, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_negZ.jpg"); 
+  background-position: 50% 50%;
+  background-size: 101% 101%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+.cube #front  { 
+  transform-origin: 0px 0px 0px;
+  /*background-color: hsla(0, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_posZ.jpg"); 
+  background-position: 50% 50%;
+  background-size: 101% 101%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+
+.cube #left  { 
+  transform-origin: 201px 0px 200px;
+  transform: rotateY( 90deg ); 
+  /*background-color: hsla(100, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_negX.jpg");
+  background-position: 50% 50%;
+  background-size: 101% 101%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+.cube #right  { 
+  transform-origin: 200px 0px 200px;
+  transform: rotateY( -90deg ); 
+  /*background-color: hsla(125, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_posX.jpg");
+  background-position: 50% 50%;
+  background-size: 101% 101%;
+  width: 402px;
+  height: 402px;
+  position: absolute;
+  display: block;
+}
+
+
+.cube #ground  { 
+  transform-origin: 0px -200px 0px;
+  transform: rotateX(-90deg) translateY(-600px) translateZ(600px); 
+  /*background-color: hsla(250, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_negY.jpg");
+  background-position: 50% 50%;
+  background-size: 101% 101%;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  display: block;
+}
+
+.cube #sky  { 
+  transform-origin: 0px -200px 0px;
+  transform: rotateX(-90deg) translateY(-600px) translateZ(200px); 
+  /*background-color: hsla(200, 100%, 50%, 0.7);*/
+  background-color: #000;
+  background-image: url("../img/skybox/space_posY.jpg");
+  background-position: 50% 50%;
+  background-size: 101% 101%;
+  width: 401px;
+  height: 401px;
+  position: absolute;
+  display: block;
+}
+
+
+.cube {
+      animation-name: spinCubeWebkit 30s infinite ease-in-out;
+      animation: spinCubeWebkit 30s infinite ease-in-out;
+    }
+
+@keyframes spinCubeWebkit {
+  0% { transform: perspective(80px) translateY(-10px) translatez(20px) rotateY(8deg) rotateX(5deg) rotateZ(30deg); }
+  40% { transform: perspective(75px) translateY(0px) translatez(30px)  rotateY(2deg) rotateX(2deg) rotateZ(35deg);}
+  60% { transform: perspective(70px) translateY(0px)  translatez(50px) rotateY(2deg ) rotateX(1deg) rotateZ(43deg);}
+  100% { transform: perspective(80px) translateY(-10px)  translatez(20px) rotateY(8deg ) rotateX(5deg) rotateZ(30deg);}
+}
+
+
+/*
+@keyframes spinCubeWebkit {
+  0% { transform: perspective(150px) translatez(-250px) rotateY(-35deg) rotateX(20deg); }
+  40% { transform: perspective(60px) translatez(-150px)  rotateY(-20deg) rotateX(30deg);}
+  60% { transform: perspective(50px)  translatez(-110px) rotateY(-30deg ) rotateX(50deg);}
+  100% { transform: perspective(150px)  translatez(-250px) rotateY( -35deg ) rotateX(20deg);}
+}
+*/
+/*
+@-moz-keyframes spinCubeMoz {
+        0% { -moz-transform: translateZ( -100px ) rotateX(   0deg ) rotateY(   0deg ); }
+      100% { -moz-transform: translateZ( -100px ) rotateX( 360deg ) rotateY( 360deg ); }
+    }
+*/

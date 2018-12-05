@@ -1,0 +1,316 @@
+// world1.scss 
+/* 
+ * world1.css - generated automatically from world1.scss 
+ */
+
+// vars
+$green: #574;
+$red: #100;
+$black: #000;
+$background-image: "./greenDaisies.jpg";
+$border-image: "../img/metalWaves.png";
+$link-glyphicon: "../img/glyphicons_051_eye_open.png";
+
+
+// mixins - gradient backgrounds
+@mixin gradient_r-g {
+    background-image: -webkit-gradient(linear,left center,right center,from($red),color-stop(39%,#444),to($green)); 
+    background-image: -moz-linear-gradient(left,$red,#444 39%,$green);
+}
+
+@mixin gradient_g-r {
+    background-image: -webkit-gradient(linear,left center,right center,from($green),color-stop(39%,#444),to($red)); 
+    background-image: -moz-linear-gradient(left,$green,#444 39%,$red);
+}
+
+// mixins - width scaling
+@mixin min-width769 {   // green-red
+        .frame{
+          line-height: 1.65em;
+        }
+        #nav1{
+          height: 60%;
+          background-position: 30%, 50%; 
+        }
+}
+@mixin max-width768 {   // red-green
+        .frame{
+          line-height: 1.6em;
+        }
+        #nav1{
+          height: 50%; 
+          background-position: 35%, 50%; 
+        }
+}
+@mixin max-width640 {   // green-red
+        .frame{
+          line-height: 1.5em;
+        }
+        #nav1{
+          height: 20%;
+          background-position: 40%, 50%; 
+        }
+}
+@mixin max-width480 {    // red-green 
+        .frame{
+          line-height: 1.25em;
+        }
+        #nav1{
+          height: 10%;
+          background-position: 45%, 50%; 
+          font-size: 105%; // set min nav-text-size=~70%
+        }
+}
+@mixin max-width320 {    // green-red
+        .frame{
+          line-height: 1.25em;
+        }
+        #nav1{
+          height: 5%;
+          background-position: 50%, 50%; 
+          font-size: 110%; // set min nav-text-size=~70%
+        }
+}
+@mixin max-width256 {   // red-green
+        .frame{
+          line-height: 1em;
+        }
+        #nav1{
+          height: 3%;
+          background-position: 55%, 50%;
+          font-size: 130%; // set min nav-text-size=~70%
+        }
+}
+
+
+/* fonts */
+@font-face{	
+    	font-family: "Neuropol";
+		src: url("../fonts/neuropol.ttf");
+}
+
+
+
+/* semantic selector-rules */
+body { 
+    @include gradient_r-g;
+    background-color: $black;  
+    font: 2.0em neuropol, sans-serif;
+    line-height: 2.4em; 
+    color: #aaa; 
+    margin: 2% 0% 0% 0%; 
+}
+#header1 {
+    padding:  3% 3% 3% 3%;  
+    //padding:  1% 0% 0% 4%;  
+    margin: 1px 3px 8px 20px;//1px;
+    color: #fee;
+    text-shadow: 
+      0 -2px 3px #aaa,
+      0 -4px 3px #666;
+    width: 100%;
+    height: 100%;
+    max-width: 590px;
+    background-image: url("../img/logo_smaller.png"); 
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 20%;
+}
+#logo{
+    padding:  3% 3% 4% 3%;  
+    position: top-left;
+    width: 35%;  /* 35 */
+    height: 35%;
+    transform-style: preserve-3d;
+}
+#title{      
+    font-size: 2.6em;
+    padding: 1% 40% 1% 18%; //2%; 
+}  
+
+#nav1{
+    padding: 0.5% 0% 0% 1%;
+    background-color: $black;  
+    background-image: url($background-image);
+    background-position: 25%, 50%; 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    text-shadow: 
+      0 -1px 1px #aaa,
+      0 -2px 2px #666;
+    font-size: 0.8em;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+#section1{
+    font: normal 1.4em calibri, sans-serif;
+    padding: 1% 2% 2% 1%;
+}
+#aside1 {
+    display: block;
+    float: right;
+    width: 30%;
+    font: normal 75% calibri, sans-serif;
+    padding: 2% 2% 2% 1%; 
+}
+.article{  
+    padding-left: 10px; 
+}
+.article h1 { 
+    margin: 1px; 
+    float: left;
+}
+.article h1 span {
+    display:none;
+}
+
+.footer { 
+    margin-left: 10px; 
+    margin-top: 1px;
+    margin-bottom: 20px;
+	padding-right:7px;
+    font-size:9px; 
+    font-weight:bold;
+    font-family:Verdana, Geneva, sans-serif;
+    letter-spacing:1.5px;
+    color: #222;
+border-style: solid;
+border-width: 256px 22px 46px 256px;
+-moz-border-image: url($border-image) 53 48 199 203 stretch repeat;
+-webkit-border-image: url($border-image) 53 48 199 203 stretch repeat;
+-o-border-image: url($border-image) 53 48 199 203 stretch repeat; 
+border-image: url($border-image) 53 48 199 203  fill stretch repeat;
+}
+.footer a:link, a:visited { 
+    margin-right: 2px;
+    float: right;
+}
+
+
+
+
+
+/* element selector-rules */
+p {
+    margin-top: 0; 
+    text-align: justify;
+}
+p#copyright {
+    text-align: center;
+}
+    
+h3 { 
+    font-style: italic;
+    letter-spacing: 0px; 
+    margin-bottom: 0px; 
+    margin-left: 28px; 
+    color: #7D775C;
+}
+h3#destination { 
+    color: #eeeeee; 
+}    
+    
+a:link { 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #D4CDDC; 
+}
+a:visited { 
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #B7A5DF; 
+}
+a:hover, a:active { 
+    text-decoration: underline; 
+    color: #9685BA; 
+}
+/* place a small icon-image to left of link-text */
+/*
+a[href^='./world']{
+    background: transparent url($link-glyphicon) left no-repeat;
+    padding-left: 35px;
+}
+*/
+
+
+
+
+/*
+
+
+*/
+/* media queries testing viewport max-width change scale, gradient colors */ 
+/* 
+ * >=769px large tablet - tiny laptop 
+ */
+@media screen and (min-width: 769px) {
+	body {
+          @include gradient_g-r;      
+          font-size: 100%;
+	}
+        @include min-width769;
+}
+
+/* 
+ * <=768px 
+ */
+@media screen and (max-width: 768px) {
+	body {
+          @include gradient_r-g;
+          font-size: 90%;
+          max-width: 800;
+	}
+        @include max-width768;
+}
+
+/* 
+ * <=640px  landscape tablet 
+ */
+@media screen and (max-width: 640px) {
+	body {
+          @include gradient_g-r;
+          font-size: 80%;
+	}
+        @include max-width640;
+} 
+
+/* 
+ * <=480px - high resolution smartphone 
+ */
+@media screen and (max-width: 480px) {
+	body {
+          @include gradient_r-g;
+          font-size: 70%;
+	}
+        @include max-width480;
+}
+
+/* 
+ * <=320px - low resolution smartphone 
+ */
+@media screen and (max-width: 320px) {
+	body {
+          @include gradient_g-r;
+          font-size: 60%;
+	}
+        @include max-width320;
+} 
+
+/* 
+ * <=256px - tiny phone 
+ */
+@media screen and (max-width: 256px) {
+	body {
+          @include gradient_r-g;
+          font-size: 50%;
+	}
+        @include max-width256;
+} 
+
+
+
+
+
+
