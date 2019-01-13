@@ -1,0 +1,367 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+* {
+	margin:0;
+	paggin:0;
+}
+
+
+body {
+    font-size: 1em;
+/*    line-height: 1.4;
+*/	background-color: #eee;
+	/*border-style: solid;
+border-width: 0px 16px 3px;
+-moz-border-image: url(2.png) 0 16 3 round;
+-webkit-border-image: url(2.png) 0 16 3 round;
+-o-border-image: url(2.png) 0 16 3 round;
+border-image: url(2.png) 0 16 3 fill round;*/
+}
+
+
+
+#container {
+	background: transparent url("../../daszu/img/lucid1999-880w.gif") no-repeat top left;
+	width: 880px;
+	height: 945px;
+    margin: 0 auto;
+}
+
+.button {
+	color:#6d908f;
+	}
+
+input {
+	font-family:"Neuropol X Free";
+	font-size:10px;
+	font-weight:bold;
+	background-color:#33335c;
+}
+
+form {
+	float: right;
+	position:fixed;
+	top:0;
+	right:center;
+}
+
+
+
+footer {
+	font-size: 11px;
+	letter-spacing:2px;
+	margin-top:120px;
+	margin-right:10px;
+	color:white; 
+	}
+
+#copyrig {
+	 margin-left:20px;
+	 float:right;
+	 }
+
+/*#homebut {
+	 float:left;}
+	 
+#daslink {
+	margin-left:326px;
+        }
+
+#dasbut { margin-top:5px;} */
+
+
+
+      .audiojs { 
+	  height: 22px; 
+	  width:304px;
+	  margin-left:-40px; 
+	  background: #404040;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.5, #555), color-stop(0.51, #444), color-stop(1, #444));
+      background-image: -moz-linear-gradient(center top, #444 0%, #555 50%, #444 51%, #444 100%);
+        -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+        -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
+		}
+		
+		
+      .audiojs .play-pause { 
+	  width: 15px; 
+	  height: 20px; 
+	  padding: 0px 8px 0px 0px; 
+	  }
+	  
+      .audiojs p { 
+	  width: 25px; 
+	  height: 20px; 
+	  margin: -3px 0px 0px -1px; 
+	  }
+	  
+      .audiojs .scrubber { 
+	  background: #5a5a5a; 
+	  width: 160px; 
+	  height: 10px; 
+	  margin: 5px; 
+	  }
+	  
+      .audiojs .progress { 
+	  height: 10px; 
+	  width: 0px; 
+	  background: #ccc;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ccc), color-stop(0.5, #ddd), color-stop(0.51, #ccc), color-stop(1, #ccc));
+      background-image: -moz-linear-gradient(center top, #ccc 0%, #ddd 50%, #ccc 51%, #ccc 100%); 
+	  }
+	  
+      .audiojs .loaded { 
+	  height: 10px; 
+	  background: #000;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #222), color-stop(0.5, #333), color-stop(0.51, #222), color-stop(1, #222));
+      background-image: -moz-linear-gradient(center top, #222 0%, #333 50%, #222 51%, #222 100%); 
+	  }
+	  
+      .audiojs .time { 
+	  float: left; 
+	  height: 25px; 
+	  line-height: 25px; 
+	  }
+	  
+      .audiojs .error-message { 
+	  height: 24px;
+	  line-height: 24px; 
+	  }
+
+      .track-details { 
+	  clear: both; 
+	  height: 19px; 
+	  width: 280px; 
+	  padding: 1px 2px; 
+	  background: #7788cc;/* #6d908f*/
+	  color: #222; 
+/*	  font-family: monospace; 
+*/	  font-size: 11px;
+      letter-spacing:1.5px;
+	  line-height: 18px;
+	  font-family:"Neuropol";
+	  font-weight:bold;
+      position:absolute;
+	  margin-top:110px;
+	  margin-left:568px;
+	  padding-left:10px;
+        -webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15);
+		 -moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.15); 
+		 }
+		 
+      .track-details:before { content: '♬ '; }
+	  
+      .track-details em { font-style: normal; color: #444; }
+	  
+	  
+/*#audio1 {
+	position: relative;
+	top:29px;
+	left:505px;
+}
+*/
+
+
+
+ol {
+	margin:0;
+	padding-top:155px;
+	font-size:11px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #f3fefb;
+}
+
+	  
+@font-face{	
+    	font-family: "Neuropol";
+		src: url("fonts/neuropol.ttf");
+}  	  
+	  
+	  
+li {
+	margin-bottom:16px;
+}
+	  
+	  
+p#tr1 {
+	font-size:11px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #f3fefb;
+	position:absolute;
+	  margin-top:154px;
+	  margin-left:40px;
+}
+	  
+	  
+p#tr2 {
+	font-size:11px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #f3fefb;
+	position:absolute;
+	  margin-top:204px;
+	  margin-left:40px;
+}
+	  
+p#tr3 {
+	font-size:11px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #f3fefb;
+	position:absolute;
+	  margin-top:255px;
+	  margin-left:40px;
+}	  
+	
+	
+	  
+p#tr4 {
+	font-size:11px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #f3fefb;
+	position:absolute;
+	  margin-top:304px;
+	  margin-left:40px;
+}	  
+
+
+
+p#tr5 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+/*	color: #f3fefb;
+*/	position:absolute;
+	  margin-top:355px;
+	  margin-left:160px;
+	  color:#222;
+	  text-shadow:#fff 1px 1px 1px;
+}	  
+
+
+p#tr6 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #222;
+	text-shadow:#fff 1px 1px 1px;
+	position:absolute;
+	  margin-top:405px;
+	  margin-left:162px;
+}	  
+
+
+
+p#tr7 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #222;
+	text-shadow:#fff 1px 1px 1px;
+	position:absolute;
+	  margin-top:454px;
+	  margin-left:204px;
+}	  
+
+
+
+p#tr8 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #222;
+	text-shadow:#fff 1px 1px 1px;
+	position:absolute;
+	  margin-top:503px;
+	  margin-left:140px;
+}	  
+
+
+
+p#tr9 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #222;
+	text-shadow:#fff 1px 1px 1px;
+	position:absolute;
+	  margin-top:553px;
+	  margin-left:220px;
+}	  
+
+	  
+	  
+p#tr10 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #222;
+	text-shadow:#fff 1px 1px 1px;
+	position:absolute;
+	  margin-top:603px;
+	  margin-left:225px;
+}	  
+	  
+	  
+	  
+p#tr11 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #222;
+	text-shadow:#fff 1px 1px 1px;
+	position:absolute;
+	  margin-top:653px;
+	  margin-left:220px;
+}	  
+
+
+
+p#tr12 {
+	font-size:12px;
+	letter-spacing:2px;
+	font-family:"Neuropol";
+	font-weight:bold;
+	color: #222;
+	text-shadow:#fff 1px 1px 1px;
+	position:absolute;
+	  margin-top:703px;
+	  margin-left:120px;
+}	  
+
+
+
+
+
+
+
+
+
+
+
+	  
+	  
