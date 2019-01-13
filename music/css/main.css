@@ -12,6 +12,17 @@
 	}
 }
 */
+
+.w-font-open_sans { font-family: 'neuropol', sans-serif !important; }
+.w-font-helvetica { font-family: 'neuropol', sans-serif !important; }
+.w-font-monofett { font-family: 'neuropol', sans-serif !important; }
+.w-font-marvel { font-family: 'neuropol', sans-serif !important; }
+.w-font-dancing_script { font-family: 'Dancing Script', cursive !important; }
+
+@font-face{	
+    	font-family: "Neuropol";
+		src: url("fonts/neuropol.ttf");
+}  	 
 /* new clearfix */
 * html .clearfix {
   zoom: 1;
